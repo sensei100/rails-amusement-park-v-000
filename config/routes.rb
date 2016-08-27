@@ -7,5 +7,6 @@ resources :rides
 root 'welcome#home'
 get '/signin', to: 'sessions#new'
 post '/signin', to: 'sessions#create'
+get '/sign_out', to: 'sessions#destroy'
 
 end

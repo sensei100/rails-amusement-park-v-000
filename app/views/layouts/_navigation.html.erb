@@ -13,7 +13,8 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
           <% if logged_in? %>
-
+            <li><%= link_to "#{current_user.name}", user_path(current_user) %></li>
+            <li><%= link_to 'Log Out', sign_out_path %></li>
           <% else %>
              <li><%= link_to 'Sign up', new_user_path %></li>
              <li><%= link_to 'Sign in', signin_path %></li>

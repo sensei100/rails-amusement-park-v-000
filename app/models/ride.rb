@@ -20,6 +20,7 @@ class Ride < ActiveRecord::Base
        "Sorry. You do not have enough tickets the #{attraction.name}."
       when user.height >= attraction.min_height && user.tickets >= attraction.tickets
         can_ride
+        "Thanks for riding the #{attraction.name}!"
 
     end
   end
